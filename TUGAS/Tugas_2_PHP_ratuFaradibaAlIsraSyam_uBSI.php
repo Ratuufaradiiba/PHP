@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tugas 2 PHP | Ratu Faradiba Al Isra Syam</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
 </head>
 
@@ -14,7 +15,8 @@
         <form id="contactForm" method="POST">
             <div class="mb-3">
                 <label class="form-label" for="namaPegawai">Nama Pegawai</label>
-                <input class="form-control" name="namaPegawai" type="text" placeholder="Nama Pegawai" data-sb-validations="required" />
+                <input class="form-control" name="namaPegawai" type="text" placeholder="Nama Pegawai"
+                    data-sb-validations="required" />
                 <div class="invalid-feedback" data-sb-feedback="namaPegawai:required">Nama Pegawai is required.</div>
             </div>
             <div class="mb-3">
@@ -32,19 +34,23 @@
             <div class="mb-3">
                 <label class="form-label d-block">Jabatan</label>
                 <div class="form-check">
-                    <input class="form-check-input" id="manager" type="radio" name="jabatan" value="Manager" data-sb-validations="required" />
+                    <input class="form-check-input" id="manager" type="radio" name="jabatan" value="Manager"
+                        data-sb-validations="required" />
                     <label class="form-check-label" for="manager">Manager</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" id="assisten" type="radio" name="jabatan" value="Assisten Manager" data-sb-validations="required" />
+                    <input class="form-check-input" id="assisten" type="radio" name="jabatan" value="Assisten Manager"
+                        data-sb-validations="required" />
                     <label class="form-check-label" for="assisten">Assisten</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" id="kabag" type="radio" name="jabatan" value="Kabag" data-sb-validations="required" />
+                    <input class="form-check-input" id="kabag" type="radio" name="jabatan" value="Kabag"
+                        data-sb-validations="required" />
                     <label class="form-check-label" for="kabag">Kabag</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" id="staff" type="radio" name="jabatan" value="Staff" data-sb-validations="required" />
+                    <input class="form-check-input" id="staff" type="radio" name="jabatan" value="Staff"
+                        data-sb-validations="required" />
                     <label class="form-check-label" for="staff">Staff</label>
                 </div>
                 <div class="invalid-feedback" data-sb-feedback="jabatan:required">One option is required.</div>
@@ -52,18 +58,21 @@
             <div class="mb-3">
                 <label class="form-label d-block">Status</label>
                 <div class="form-check">
-                    <input class="form-check-input" id="menikah" type="radio" name="status" value="Menikah" data-sb-validations="required" />
+                    <input class="form-check-input" id="menikah" type="radio" name="status" value="Menikah"
+                        data-sb-validations="required" />
                     <label class="form-check-label" for="menikah">Menikah</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" id="belumMenikah" type="radio" name="status" value="Belum Menikah" data-sb-validations="required" />
+                    <input class="form-check-input" id="belumMenikah" type="radio" name="status" value="Belum Menikah"
+                        data-sb-validations="required" />
                     <label class="form-check-label" for="belumMenikah">Belum Menikah</label>
                 </div>
                 <div class="invalid-feedback" data-sb-feedback="status:required">One option is required.</div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="jumlahAnak">Jumlah Anak</label>
-                <input class="form-control" name="anak" type="text" placeholder="Jumlah Anak" data-sb-validations="required" />
+                <input class="form-control" name="anak" type="text" placeholder="Jumlah Anak"
+                    data-sb-validations="required" />
                 <div class="invalid-feedback" data-sb-feedback="jumlahAnak:required">Jumlah Anak is required.</div>
             </div>
             <div class="d-none" id="submitErrorMessage">
@@ -105,9 +114,9 @@
             $tunkel = 0;
 
             if ($status  == 'Menikah' && $anak <= 2) $tunkel = 0.05 * $gapok;
-            else if ($status == 'Menikah' && $anak >= 3) $tunkel = 0.1 * $gapok;
-            else if ($status == 'Menikah' && $anak >= 5) $tunkel = 0.15 * $gapok;
-            else $tunkel = 0;
+            else if ($status == 'Menikah' && $anak >= 3 && $anak <= 5) $tunkel = 0.1 * $gapok;
+            else if ($status == 'Menikah' && $anak > 5) $tunkel = 0.15 * $gapok;
+            else $tunkel = 0;;
 
             $gakot = $gapok + $tunjab + $tunkel;
 
@@ -118,35 +127,35 @@
 
         if (isset($klik)) { ?>
         <br>
-            <table class="table table-info">
-                <thead>
-                    <tr>
-                        <th scope="col">Nama Pegawai</th>
-                        <th scope="col">Agama</th>
-                        <th scope="col">Jabatan</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Gaji Pokok</th>
-                        <th scope="col">Tunjangan Jabatan</th>
-                        <th scope="col">Tunjangan Keluarga</th>
-                        <th scope="col">Gaji Kotor</th>
-                        <th scope="col">Zakat</th>
-                        <th scope="col">Take Home Pay</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><?= $nama; ?></td>
-                        <td><?= $agama; ?></td>
-                        <td><?= $jabatan; ?></td>
-                        <td><?= $status; ?></td>
-                        <td><?= number_format($gapok, 0, ',', '.'); ?></td>
-                        <td><?= number_format($tunjab, 0, ',', '.'); ?></td>
-                        <td><?= number_format($tunkel, 0, ',', '.'); ?></td>
-                        <td><?= number_format($gakot, 0, ',', '.');; ?></td>
-                        <td><?= number_format($zakat, 0, ',', '.');?></td>
-                        <td><?= number_format($hompey, 0, ',', '.'); ?></td>
-                </tbody>
-            </table>
+        <table class="table table-info">
+            <thead>
+                <tr>
+                    <th scope="col">Nama Pegawai</th>
+                    <th scope="col">Agama</th>
+                    <th scope="col">Jabatan</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Gaji Pokok</th>
+                    <th scope="col">Tunjangan Jabatan</th>
+                    <th scope="col">Tunjangan Keluarga</th>
+                    <th scope="col">Gaji Kotor</th>
+                    <th scope="col">Zakat</th>
+                    <th scope="col">Take Home Pay</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><?= $nama; ?></td>
+                    <td><?= $agama; ?></td>
+                    <td><?= $jabatan; ?></td>
+                    <td><?= $status; ?></td>
+                    <td><?= number_format($gapok, 0, ',', '.'); ?></td>
+                    <td><?= number_format($tunjab, 0, ',', '.'); ?></td>
+                    <td><?= number_format($tunkel, 0, ',', '.'); ?></td>
+                    <td><?= number_format($gakot, 0, ',', '.');; ?></td>
+                    <td><?= number_format($zakat, 0, ',', '.');?></td>
+                    <td><?= number_format($hompey, 0, ',', '.'); ?></td>
+            </tbody>
+        </table>
         <?php } ?>
 
 
@@ -155,7 +164,8 @@
 
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
