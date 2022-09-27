@@ -1,0 +1,14 @@
+h1 m6
+Pak Nasrul
+
+p1 php
+
+Definisi Pemrograman PHP
+php eksekusinya di web servernya bukan di sisi client
+
+download xampp
+
+pretest rest API
+
+define artinya sama kaya const. variabel yg valuenya tetap
+ss control panel, webversinya, sama filenya
