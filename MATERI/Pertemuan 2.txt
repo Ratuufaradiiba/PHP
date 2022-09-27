@@ -1,0 +1,9 @@
+H2 M6
+Pak Nasrul
+
+P2 PHP
+
+Struktur kendali pada php
+METODE MEMPROSES FORM
+Mempelajari number format
+method get dan post pada form
