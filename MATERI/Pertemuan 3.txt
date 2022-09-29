@@ -1,0 +1,11 @@
+h4 m5
+Pak Nasrul
+
+p3 PHP
+
+Mempelajari Looping  for dan while
+
+ looping Array harus pake foreach
+Array sclar, array 1 dimensi
+
+belajar func aggregation
