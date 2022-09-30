@@ -1,0 +1,14 @@
+H5 M5
+Pak Nasrul
+
+P4 PHP
+
+Hak akses modifier
+konstruktor adalah yang menjembatani class
+
+include pake bstrp
+klo bukan php biasa kya class atau fungsi fungsi pake require
+require 'namafile classnya' untuk satu file
+require_one untuk semua file
+
+self buat akses variable di dalam classnya kalo diluar class pakai Namaclass::$nama_variablenya
