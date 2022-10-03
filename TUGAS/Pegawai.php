@@ -5,7 +5,6 @@ class Pegawai{
     public $jabatan;
     public $agama;
     public $status;
-    public $hompey;
     const DAFTAR = 'Daftar Pegawai PT Anu';
     
     public function __construct($no, $pegawai, $jbtn, $agama, $status){
